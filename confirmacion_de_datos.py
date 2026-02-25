@@ -1,13 +1,15 @@
 def cedula_ciudadania():
-    bienvenida = input("Bienvenido al sistema de validacion de cedula, desea ingresar su numero de cedula? (si/no): ")
-    cedula = input("Ingrese su numero de cedula: ")
-    if len(cedula) != 10:
-        print("numero de cedula no valido")
-        return cedula_ciudadania()  # Vuelve a pedir la cédula si no es válida
-    else:
-        print("numero de cedula valido") 
-        
 
+    while True:
+        bienvenida = input("Bienvenido al sistema de validacion de cedula, desea ingresar su numero de cedula? (si/no): ")
+        cedula = input("Ingrese su numero de cedula: ")
+        if len(cedula) != 10:
+            print("numero de cedula no valido")
+            return cedula_ciudadania()  # Vuelve a pedir la cédula si no es válida
+            break
+        else:
+            print("numero de cedula valido\n") 
+        
 cedula_ciudadania()
 
 for i in range(1, 2):  contraseña = input("Ingrese su contraseña: ")
