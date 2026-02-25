@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculadora de misiones</h1>
+    <p>INGRESA 2 NUMEROS Y HAZ CLICK PARA SUMARLOS</p>
+    <form action="">
+        <input id="numero_1" type="number" placeholder="Primer numero" required />
+        <input id="numero_2" type="number" placeholder="Segundo_numero" required />
+        <button id="sumar-btn">Sumar</button>
+    </form>
+
+    <script>
+        const inputNumero1 = document.getElementById("numero_1")
+        const inputNumero2 = document.getElementById("numero_2")
+        const sumarBtn = document.getElementById("sumar-btn")
+
+
+        const sumar = () => {
+
+            let numero1 = parseFloat(inputNumero1.value)
+            let numero2 = parseFloat(inputNumero2.value)
+
+            let resultado = numero1 + numero2
+
+            alert("El resultado es: " + resultado)
+
+        }
+
+        sumarBtn.addEventListener("click", sumar)
+
+    </script>
+
+</body>
+
+</html>
