@@ -1,4 +1,4 @@
-def calculadora():
+def calculadora(): 
     while True:
         print("bienvenido a la calculadora")
         print("1. suma")
@@ -10,7 +10,11 @@ def calculadora():
         print("7. porcentaje")
         print("8. modulo %")
         print("9.promedio")
-        print("10. desea continuar? (si/no)")
+        print("10. logaritmo")
+        print("11. cotangente")
+        print("12. algoritmo de euclides") 
+        print("13. calcular el area de un circulo")
+        print("14. quisiera continuar? (si/no)")
 
         opcion = int(input("seleccione una opcion:"))
         if opcion == 1:
@@ -63,12 +67,32 @@ def calculadora():
             num2 = float(input("ingrese el segundo numero:"))
             resultado = (num1 + num2) / 2
             print(f"el resultado del promedio es: {resultado}")
+
         elif opcion == 10:
-            continuar = input("desea continuar? (si/no):")
-            if continuar.lower() == "no":
-                print("gracias por usar la calculadora buen dia / noche / tarde")
-                break
-            else:                continue
-        else:           print("opcion no valida")
-        calculadora()
-calculadora()
+            import math
+            num = float(input("ingrse el numero:"))
+            if num <= 0:
+                print("no se puede calcular el logaritmo de un numero menor o igual a cero")
+            else:
+                resultado = math.log(num)
+                print(f"el resultado del logaritmo es: {resultado}")
+        elif opcion == 11:
+                import math
+                num = float(input("ingrese el numero:"))
+        if num == 0:
+                print("no se puede calcular la cotangente de cero")
+        else:               resultado = 1 / math.tan(num)
+        print(f"el resultado de la cotangente es: {resultado}")
+        elif opcion == 12:
+        def euclides(a, b):
+            while b:
+                a, b = b, a % b
+            return a
+        num1 = int(input("ingrese el primer numero:"))
+        num2 = int(input("ingrese el segundo numero:"))
+        resultado = euclides(num1, num2)
+        print(f"el resultado del algoritmo de euclides es: {resultado}")
+
+    elif ocion == 13:
+        import math
+        radio = float
